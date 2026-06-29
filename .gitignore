@@ -1,0 +1,6 @@
+# kotoba per-actor identity (Ed25519) — NEVER commit. path-template .<actor>/identity.edn
+/.com-google-ads/
+/identity.edn
+/out/
+/.cpcache/
+/.clj-kondo/.cache/
