@@ -1,12 +1,13 @@
-# com-google-ads (広) — Charter-Clean Outreach & Performance-Marketing Actor
+# action-paid-outreach (広) — Charter-Clean Outreach & Performance-Marketing Action
 
+**Repository**: `gftdcojp/action-paid-outreach`
 **DID**: `did:web:etzhayyim.github.io:com-google-ads`
 **Namespace**: `com.etzhayyim.googleads.*`
 **ADR**: ADR-2606292130 (R0 scaffold)
 **Status**: R0 design scaffold (2026-06-29)
 **Tier**: Tier-B
 
-`com-google-ads` is a kotoba-native actor for the org's own **outreach** —
+`action-paid-outreach` is a kotoba-native action for gftdcojp's own **outreach** —
 mission amplification (events, publications, mutual-aid drives,
 land-sovereignty appeals, donation drives) — under constitutional invariants
 that make the surveillance/ad-tech harms structurally impossible. It is the
@@ -51,7 +52,7 @@ cohort (talent / self-sovereign opt-in, G3)
  └──────────────┘
 ```
 
-> **com-google-ads never publishes a campaign, bid, budget, or creative that
+> **action-paid-outreach never publishes a campaign, bid, budget, or creative that
 > a human has not approved, and never targets an identifiable individual.**
 
 ## Constitutional gates (G1–G9)
@@ -107,9 +108,13 @@ Full text in `manifest.edn` `:actor/gates`.
 - **R2** — pilot: first real outreach campaign under G1–G9, full akashi mirror.
 - **R3** — multi-cohort fleet, cohort spend caps, Council promotion gates via Datalog over the audit log.
 
-## Follow-up (standing-authorized)
+## Repository and compatibility boundary
 
-Split repo `etzhayyim/com-google-ads` → west entry `orgs/etzhayyim/com-google-ads`
-→ RAD identity journal (`:rad/repo "github.com/etzhayyim/com-google-ads"`,
-`:rad/did-web "did:web:etzhayyim.github.io:com-google-ads"`), per CLAUDE.md
-«Actors» section. R0 lands the design; the repo + west + RAD follow.
+The repository moved from `etzhayyim/com-google-ads` to
+`gftdcojp/action-paid-outreach` on 2026-08-11. The historical DID and
+`com.etzhayyim.googleads.*` NSIDs remain compatibility identifiers; this move
+does not silently reissue protocol identity.
+
+- `kotoba-lang/com-googleads` owns the Google Ads-compatible API substrate.
+- `cloud-itonami/outreach` owns the reusable execution surface.
+- This repository owns gftdcojp's propose → govern → approve → disclose action.

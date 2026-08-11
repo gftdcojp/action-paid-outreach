@@ -1,4 +1,4 @@
-# com-google-ads (広) — Charter-Clean Outreach & Performance-Marketing Actor Design
+# action-paid-outreach (広) — Charter-Clean Outreach & Performance-Marketing Action Design
 
 > **kotoba-native** (ADR-2606292130, R0 scaffold). Canonical manifest:
 > `manifest.edn`; data model: `kotoba/schema.edn`; lexicons: `lex/*.edn`;
@@ -171,34 +171,30 @@ audiences, off-book spend, voter microtargeting.
 
 `googleads-compat` (ADR-260607, L4, REST clean-room, 30 endpoints) is an
 API-compatible **external surface** — Google's entity shapes cloned for
-interop. com-google-ads does NOT extend it. The native actor owns its own
+interop. action-paid-outreach does NOT extend it. The native action owns its own
 EAVT data model, governance gates, and cross-actor boundaries. The compat
 shell may, at R2+, be wired as one (gated, first-party) publish adapter
 behind the DiscloseCell — but the gates, not the compat surface, are
 authoritative.
 
-## 10. Outward registration (owner-authorized 2026-06-29, standing-auth per CLAUDE.md «Actors»)
+## 10. Repository placement
 
-Per CLAUDE.md «Actors», `20-actors/com-google-ads` (in-root design home) is
-**unseparated** until the child repo + west entry + RAD identity are landed.
-Owner directive 2026-06-29 authorizes the outward flow as standard (not
-per-step-confirmed). Completion condition:
+The R0 actor was separated as `etzhayyim/com-google-ads`. On 2026-08-11 its
+repository authority moved to `gftdcojp/action-paid-outreach`, reflecting its
+role as a startup growth-governance action rather than an artificial-organism
+core component.
 
-- **child repo**: `github.com/etzhayyim/com-google-ads` (private, plain-git;
-  west path `orgs/etzhayyim/com-google-ads`). Per user directive the repo is
-  `com-google-ads` (the `com-` prefix plays the role `com-etzhayyim-` plays
-  for other actors), NOT `com-etzhayyim-google-ads`.
+- **child repo**: `github.com/gftdcojp/action-paid-outreach` (public,
+  plain-git; west path `orgs/gftdcojp/action-paid-outreach`).
 - **west entry**: `manifest/repos.edn` `:extra-projects` → `manifest/west.yml`
   via the API single-entry commit (CLAUDE.md «manifest-workflow»; `--check`
   canonical, pin == child HEAD).
 - **RAD identity**: `80-data/kotoba-rad/com-google-ads.identity.journal.edn`
-  — `:rad/name "com-google-ads"`, `:rad/repo "github.com/etzhayyim/com-google-ads"`,
+  — `:rad/name "com-google-ads"`, `:rad/repo "github.com/gftdcojp/action-paid-outreach"`,
   `:rad/did-web "did:web:etzhayyim.github.io:com-google-ads"`,
   `:rad/aozora-collection "com.etzhayyim.apps.googleads"`. Identity SSoT =
   `00-contracts/schemas/actor-profile-seed.kotoba.edn`; the RAD journal +
   `did.json`/`profile.json` are generated from it.
 
-**Status**: ADR + scaffold (manifest + EAVT schema + lexicons + did + DESIGN)
-authored; child repo + west pin + RAD identity are the outward steps, landed
-in an isolated root worktree + PR (the shared root checkout is raced by
-concurrent agents per root CLAUDE.md «Worktree isolation»).
+**Compatibility**: the historical DID and `com.etzhayyim.googleads.*` NSIDs
+remain pinned until a separately governed identity migration is deployed.
