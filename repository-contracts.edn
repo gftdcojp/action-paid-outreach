@@ -1,0 +1,26 @@
+{:contracts/version 1
+ :contracts
+ [{:contract/id :api/google-ads
+   :repository "https://github.com/kotoba-lang/com-googleads"
+   :revision "c72a1dfd5f709b9d0293364eb444c63e1cf47a05"}
+  {:contract/id :execution/outreach
+   :repository "https://github.com/cloud-itonami/outreach"
+   :revision "c2d98847cb0b81603c3748e855617f29668e92b4"}
+  {:contract/id :disclosure/akashi
+   :repository "https://github.com/cloud-itonami/akashi"
+   :revision "2012fd23bef91572b607877a3e1cc75a95c64c5f"}
+  {:contract/id :accountability/danjo
+   :repository "https://github.com/cloud-itonami/danjo"
+   :revision "96e05921bc92670428ce50f3d3e85e0a1dcf004d"}
+  {:contract/id :taxonomy/isco
+   :repository "https://github.com/etzhayyim/com-etzhayyim-isco"
+   :revision "27c6f88e4b8c9bd01bdbc2c8a854068f84ee076a"}
+  {:contract/id :boundary/moushibumi
+   :repository "https://github.com/cloud-itonami/moushibumi"
+   :revision "ad7c76a7f89eaed9955910e66fd76b3db0aac63d"}
+  {:contract/id :cohort/talent
+   :repository "https://github.com/etzhayyim/com-etzhayyim-talent"
+   :revision "db68114486cb34195b50c6e1e57ae11667d533ee"}
+  {:contract/id :ledger/toritate
+   :repository "https://github.com/cloud-itonami/toritate"
+   :revision "1e42499a623f2e12c63a001b577b85788db64c9c"}]}

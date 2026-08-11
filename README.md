@@ -118,3 +118,7 @@ does not silently reissue protocol identity.
 - `kotoba-lang/com-googleads` owns the Google Ads-compatible API substrate.
 - `cloud-itonami/outreach` owns the reusable execution surface.
 - This repository owns gftdcojp's propose → govern → approve → disclose action.
+
+Pinned cross-repository boundaries are recorded in `repository-contracts.edn`.
+Run `./run_tests.sh` to verify the EDN surfaces and the structural privacy and
+human-approval invariants.
