@@ -1,0 +1,14 @@
+{:schema "etzhayyim.repository/v1"
+ :repository "gftdcojp/action-paid-outreach"
+ :kind :growth-governance-action
+ :protocol-identity {:actor-id "com-google-ads"
+                     :did "did:web:etzhayyim.github.io:com-google-ads"
+                     :nsid-prefix "com.etzhayyim.googleads"
+                     :status :compatibility-pinned}
+ :boundary {:owns :propose-govern-approve-disclose
+            :api-substrate "kotoba-lang/com-googleads"
+            :execution-surface "cloud-itonami/outreach"
+            :disclosure-surface "cloud-itonami/akashi"
+            :does-not-own :tamaki-organism-runtime}
+ :migration {:from "etzhayyim/com-google-ads"
+             :date "2026-08-11"}}
